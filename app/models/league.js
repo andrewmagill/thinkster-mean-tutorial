@@ -10,7 +10,7 @@ var LeagueSchema = new Schema({
 
 LeagueSchema.statics = {
   load: function(id, cb) {
-    this.findOne({ _id: id }).populate('commisioner').exec(cb);
+    this.findOne({ _id: id }).populate('commissioner').exec(cb);
   }
 };
 
