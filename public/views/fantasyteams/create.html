@@ -1,0 +1,21 @@
+<div ng-controller="FantasyTeamsController">
+	<form action="" class="form-horizontal" ng-submit="create() ng-init=" populateLeagues="">
+		<div class="control-group">
+			<label for="name" class="control-label">Name</label>
+			<div class="controls">
+				<input type="text" ng-model="fantasteam.name" id="name" placeholder="Name">
+			</div>
+			<label for="league" class="control-label">League</label>
+			<div class="controls">
+				<select name="league" id="" ng-model="fantasyteam.league" required="required" ng-options="c.id as c.name for c in leagues">
+					<option value="">Choose a league:</option>
+				</select>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</div>
