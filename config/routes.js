@@ -38,7 +38,7 @@ module.exports = function (app, passport, auth) {
   //player routes
   var players = require('../app/controllers/players')
   app.get('/players', players.all)
-  app.get('players/:playersId', players.show)
+  app.get('/players/:playerId', players.show)
 
   app.param('playerId', players.player)
 

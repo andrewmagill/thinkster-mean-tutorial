@@ -11,8 +11,8 @@ exports.player = function (req, res, next, id) {
   var Player = mongoose.model('Player')
 
   Player.load(id, function (err, player) {
-    if(err) return next(err)
-    if(!player) return next(new Error('Failed to load player' + id))
+    if (err) return next(err)
+    if (!player) return next(new Error('Failed to load player' + id))
     req.player = player
     next()
   })

@@ -1,5 +1,5 @@
 window.angular.module('ngff.controllers.players', [])
-  .controller('PlayersController', ['$scope','Global','NFL','Players'
+  .controller('PlayersController', ['$scope','Global','NFL','Players',
     function ($scope, Global, NFL, Players) {
       $scope.global = Global;
 
