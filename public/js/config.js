@@ -1,7 +1,7 @@
 //Setting up route
 window.app.config(['$routeProvider', function($routeProvider) {
-	$routeProvider
-	.when('/', 
+  $routeProvider
+  .when('/', 
   { 
     templateUrl: 'views/index.html' 
   })
@@ -45,7 +45,7 @@ window.app.config(['$routeProvider', function($routeProvider) {
   {
     templateUrl: 'views/fantasyteams/view.html'
   })
-	.otherwise({redirectTo: '/'});
+  .otherwise({redirectTo: '/'});
 }]);
 
 //Removing tomcat unspported headers
