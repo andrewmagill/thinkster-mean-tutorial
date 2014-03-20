@@ -30,7 +30,7 @@ var mongoose = require('mongoose')
  		if (err) {
  			res.render('error', {status: 500});
  		} else {
- 			res.jsonp(fantasyteam);
+ 			res.jsonp(fantasyteams);
  		}
  	});
  }

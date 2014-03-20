@@ -11,7 +11,7 @@ window.angular.module('ngff.controllers.fantasyTeams', [])
 			};
 
 			$scope.create = function () {
-				var fantasyteam = new FantasyTeam({
+				var fantasyteam = new FantasyTeams({
 					league: this.fantasyteam.league,
 					name: this.fantasyteam.name,
 					players: this.players
@@ -34,17 +34,17 @@ window.angular.module('ngff.controllers.fantasyTeams', [])
 				});
 			};
 
-			$scope.find = functon (query) {
-				FantasyTeam.query(query, function (fantasyteams) {
+			$scope.find = function (query) {
+				FantasyTeams.query(query, function (fantasyteams) {
 					$scope.fantasyteams = fantasyteams;
 				});
 			};
 
-			$scope.findOne = function ( {
-				FantasyTeam.get({ fantasyTeamId: $routeParams.fantasyTeamId }, function (fantasyteam) {
+			$scope.findOne = function () {
+				FantasyTeams.get({ fantasyTeamId: $routeParams.fantasyTeamId }, function (fantasyteam) {
 					$scope.fantasyteam = fantasyteam;
 				});
-			});
+			};
 
 			$scope.remove = function (fantasyteam) {
 				fantasyteam.$remove();

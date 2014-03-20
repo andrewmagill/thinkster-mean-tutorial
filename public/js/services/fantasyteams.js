@@ -1,4 +1,4 @@
-window.angular.module('ngff.services.fantasyTeams' [])
+window.angular.module('ngff.services.fantasyTeams', [])
 	.factory('FantasyTeams', ['$resource',
 		function($resource){
 			return $resource(
