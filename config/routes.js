@@ -35,6 +35,13 @@ module.exports = function (app, passport, auth) {
 
   app.param('fantasyTeamId', fantasyteams.fantasyteam)
 
+  //player routes
+  var players = require('../app/controllers/players')
+  app.get('/players', players.all)
+  app.get('players/:playersId', players.show)
+
+  app.param('playerId', players.player)
+
   // home route
   var index = require('../app/controllers/index')
   app.get('/', index.render)
